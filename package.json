@@ -1,0 +1,41 @@
+{
+  "name": "cluck",
+  "version": "1.0.0",
+  "description": "Clucky twitty",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "debug": "nodemon --inspect",
+    "db:create": "createdb --echo cluck_dev",
+    "db:drop": "dropdb --echo --if-exists cluck_dev",
+    "db:migrate": "node db/migration.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleggaleev/quizes.git"
+  },
+  "keywords": [
+    "twit",
+    "cluck"
+  ],
+  "author": "Oleg Galeev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleggaleev/quizes/issues"
+  },
+  "homepage": "https://github.com/oleggaleev/quizes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "knex": "^0.13.0",
+    "moment": "^2.19.0",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "pg": "^7.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

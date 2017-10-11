@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<div class="container-fluid">
+
+  <section class="cluck-list row justify-content-center">
+
+
+    <% for (let cluck of clucks) { %>
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body d-flex justify-content-around row">
+            <div id='sam' class='col-1'>
+              <img src='https://lh3.googleusercontent.com/-ecV5jI8uALg/AAAAAAAAAAI/AAAAAAAAATc/mY2GoeeBzZQ/s640/photo.jpg' width='100px'>
+            </div>
+            <div class='col-10'>
+              <strong><%= cluck.username %> • <%= moment(cluck.created_at).fromNow()%> </strong>
+              <p class="card-text">
+                <%= cluck.content %>
+              </p>
+              <img class="card-img" src="<%= cluck.image_path %>">
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
+
+  </section>
+
+</div>
+
+<%- include('../partials/footer') %>

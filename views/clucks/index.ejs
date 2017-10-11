@@ -1,0 +1,56 @@
+<%- include('../partials/header') %>
+
+<div class="container-fluid">
+
+  <section class="cluck-list row justify-content-center">
+
+    <div class="col-sm-8">
+      <form
+        class="d-flex flex-column"
+        action="/clucks"
+        enctype="multipart/form-data"
+        method='POST'
+      >
+        <div class="form-group">
+          <h5>Username</h5>
+          <input
+            class="form-control"
+            name="username"
+            placeholder="Amarety McRoosterson"
+            type="text"
+          />
+        </div>
+
+        <div class="form-group">
+          <h5>Content</h5>
+          <textarea
+            class="form-control"
+            rows='5'
+            name='content'
+            placeholder="Whatchoo cluckin' 'bout'"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            name="photo"
+            type="file"
+          />
+        </div>
+
+        <input
+          class="btn btn-outline-primary align-self-end"
+          type='submit'
+          value='Cluck'
+        />
+      </form>
+    </div>
+
+    
+
+  </section>
+
+</div>
+
+<%- include('../partials/footer') %>
